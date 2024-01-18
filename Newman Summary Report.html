@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///Users/shimaa/Documents/newman/Soum%20Assessment-2024-01-18-19-16-41-713-0.html -->
+<html lang="en" style="overflow-y: scroll;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Newman Summary Report</title>
+  <link rel="stylesheet" href="./Newman Summary Report_files/all.min.css">
+  <link rel="stylesheet" href="./Newman Summary Report_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./Newman Summary Report_files/default.min.css">
+  <link rel="stylesheet" href="./Newman Summary Report_files/datatables.min.css">
+
+<style>
+code.renderMarkdown table, code.renderMarkdown th, code.renderMarkdown td {
+    border: 1px solid black;
+    width: max-content;
+    padding: .75rem;
+}
+
+.theme-dark {
+    --background-color: #222;
+    --bg-card-deck: #444444;
+    --text-color: #ccd2d8;
+    --tab-border: solid 1px #444;
+    --success: #3c9372;
+    --failure: #c24a3f;
+    --warning: #d28c23;
+    --info: #4083b6;
+    --badge-outline: #3c9372;
+    --badge-bg: #cdd3db;
+    --badge-text: #ccd2d9;
+    --failure-row: #c24a3f;
+    --warning-row: #d28c23;
+    --card-bg: #444;
+    --card-footer: #4f5758;
+    --form-input: #ececb5;
+    --hov-text: #d2dae5;
+    --h4-text: #ccd1d9;
+}
+
+.theme-light {
+    --tab-border: solid 1px #fff;
+    --text-color: #000000;
+    --success: #42a745;
+    --failure: #dc3544;
+    --warning: #f4c10b;
+    --info: #49a1b8;
+    --badge-outline: #040411;
+    --badge-bg: #f8f9fa;
+    --badge-text: #fff;
+    --failure-row: #f5c6cb;
+    --warning-row: #ffeeba;
+    --card-bg: #f7f7f7;
+    --hov-text: #fff;
+    --h4-text: #ffffff;
+}
+
+body {
+  padding-top:30px;
+  background-color: var(--background-color)!important;
+  color: var(--text-color);
+}
+
+#execution-data {
+  padding: 10px;
+  border: var(--tab-border);
+  border-top: none;
+}
+
+.nav-tabs {
+  padding-top: 10px;
+  height: 105px;
+  overflow-y: auto;
+}
+
+body.theme-dark .card-header {
+    background-color: #444;
+}
+
+body.theme-light .card-header {
+    background-color: #f7f7f7;
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: var(--card-footer);
+}
+
+.card-deck {
+    background-color: var(--bg-card-deck)!important;
+}
+.form-control {
+    background: var(--form-input);
+}
+
+.custom-tab {
+  padding: 10px 15px;
+  margin-right: 0px;
+  height: 47px;
+  width: 69px;
+  text-align: center;
+  border: var(--tab-border);
+  border-bottom: none;
+  cursor:pointer;
+}
+
+body.theme-dark .text-white {
+    color: #ccd2d9!important;
+}
+h4 {
+    color: var(--h4-text);
+}
+
+body.theme-dark h1 {
+    color: #ccd2da;
+}
+
+body.theme-dark .bg-light>td {
+    background: #4f5858!important;
+}
+
+body.theme-dark .hljs {
+    background: #0a0a0ab0!important;
+    color: #8d8787!important;
+}
+
+.bg-info {
+    background-color: var(--info)!important;
+}
+.bg-success {
+    background-color: var(--success)!important;
+}
+
+.alert-success {
+    background-color: var(--success)!important;
+}
+
+.alert-warning {
+    background-color: var(--warning)!important;
+}
+
+.alert-info {
+    background-color: var(--info)!important;
+}
+
+.bg-warning {
+    background-color: var(--warning)!important;
+}
+
+.badge-warning {
+    color: var(--badge-text)!important;
+    background-color: var(--warning)!important;
+}
+
+.table-warning>td {
+    background-color: var(--warning-row);
+}
+
+.alert-danger {
+    background-color: var(--failure)!important;
+}
+
+body.theme-dark .alert-dark {
+    background-color: #636467!important;
+}
+
+body.theme-dark .text-dark {
+    color: #d1dae4!important;
+}
+
+body.theme-dark .badge-light {
+    color: #212529;
+    background-color: #cdd3db;
+}
+
+body.theme-light .badge-light {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+body.theme-light .bg-danger {
+    background-color: var(--failure)!important;
+}
+
+body.theme-dark .bg-danger {
+    background-color: var(--failure)!important;
+}
+
+.table-danger>td {
+    background-color: var(--failure-row);
+}
+
+body.theme-dark .table .thead-light th {
+    background-color: #4f5858!important;
+    border-color: #dee2e6!important;
+    color: #ccd2d8!important;
+}
+
+.itPassed {
+  background: var(--success);
+  color: white;
+}
+.itFailed {
+  background: var(--failure);
+  color: white;
+}
+
+.resultsInfoPass {
+  color: var(--success);
+  padding-top: 4px;
+}
+
+.resultsInfoFail {
+  color: var(--failure);
+  padding-top: 4px;
+}
+
+.badge-outline-success {
+  color: var(--success);
+  border: 1px solid var(--success);
+  background-color: transparent;
+}
+
+.badge-outline {
+  color: var(--badge-outline);
+  border: 1px solid var(--badge-outline);
+  background-color: transparent;
+}
+
+.btn-outline-success {
+    color: var(--success)!important;
+    border-color: var(--success)!important;
+}
+
+.backToTop:hover {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: var(--hov-text)!important;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: var(--hov-text)!important;
+}
+
+.btn-outline-secondary {
+  background-color: var(--success)!important;
+  color: var(--hov-text)!important;
+}
+
+body.theme-dark .env-heading {
+    color: #ccd2d9!important;
+}
+
+body, html {
+  height:100%;
+}
+
+.card {
+  overflow:hidden;
+}
+
+body.theme-dark .card-body {
+    background-color: #444;
+}
+
+body.theme-light .card-body {
+    background-color: #f7f7f7;
+}
+
+body.theme-dark .card-body .bg-danger {
+    background-color: var(--failure)!important;
+}
+
+body.theme-light .card-body .bg-danger {
+    background-color: var(--failure)!important;
+}
+
+.card-body .rotate {
+  z-index: 8;
+  float: right;
+  height: 100%;
+}
+
+.card-body .rotate i {
+  color: #14141426;
+  position: absolute;
+  left: 0;
+  left: auto;
+  right: -10px;
+  bottom: 0;
+  display: block;
+  -webkit-transform: rotate(-44deg);
+  -moz-transform: rotate(-44deg);
+  -o-transform: rotate(-44deg);
+  -ms-transform: rotate(-44deg);
+  transform: rotate(-44deg);
+}
+
+.dyn-height {
+  max-height:350px;
+  overflow-y:auto;
+}
+
+.nav-pills .nav-link.active {
+  background-color: transparent!important;
+}
+
+.backToTop {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 99;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.card-header .fa {
+  transition: .3s transform ease-in-out;
+}
+.card-header .collapsed .fa {
+  transform: rotate(90deg);
+}
+
+.single-line-tabs {
+  padding-top: 10px;
+  height: 60px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #4083b6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4083b6;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+table.dataTable td, table.dataTable tr {
+    vertical-align: middle;
+}
+
+body.theme-dark code {
+    color: #ccd2d8!important;
+}
+
+body.theme-light code {
+    color: #000000!important;
+}
+
+.text-wrap {
+    word-wrap: break-word; 
+    min-width: 600px; 
+    max-width: 600px; 
+    white-space: normal;
+}
+
+</style>
+</head>
+<body class="theme-dark">
+<script>
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.body.className = themeName;
+    }
+
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-light') {
+            setTheme('theme-dark');
+        } else {
+            setTheme('theme-light');
+        }
+    }
+</script>
+  <div class="container">
+        <div class="container">
+            <label>Light</label>
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
+            <label>Dark</label>
+        </div>
+        <div class="card">
+        <div class="card-header">
+            <ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
+            <li class="nav-item bg-info active" data-toggle="tooltip" title="" data-original-title="Click to view the Summary">
+                <a class="nav-link text-white" id="pills-summary-tab" data-toggle="pill" href="file:///Users/shimaa/Documents/newman/Soum%20Assessment-2024-01-18-19-16-41-713-0.html#pills-summary" role="tab" aria-controls="pills-summary" aria-selected="true">Summary</a>
+            </li>
+            <li class="nav-item bg-success" data-toggle="tooltip" title="" data-original-title="Click to view the Requests">
+                <a class="nav-link text-white" id="pills-requests-tab" data-toggle="pill" href="file:///Users/shimaa/Documents/newman/Soum%20Assessment-2024-01-18-19-16-41-713-0.html#pills-requests" role="tab" aria-controls="pills-requests" aria-selected="false">Total Requests <span class="badge badge-light">1</span></a>
+            </li>
+            <li class="nav-item bg-danger" data-toggle="tooltip" title="" data-original-title="Click to view the Failed Tests">
+                <a class="nav-link text-white" id="pills-failed-tab" data-toggle="pill" href="file:///Users/shimaa/Documents/newman/Soum%20Assessment-2024-01-18-19-16-41-713-0.html#pills-failed" role="tab" aria-controls="pills-failed" aria-selected="false">Failed Tests <span class="badge badge-light">0</span></a>
+            </li>
+            <li class="nav-item bg-warning" data-toggle="tooltip" title="" data-original-title="Click to view the Skipped Tests">
+                <a class="nav-link text-white" id="pills-skipped-tab" data-toggle="pill" href="file:///Users/shimaa/Documents/newman/Soum%20Assessment-2024-01-18-19-16-41-713-0.html#pills-skipped" role="tab" aria-controls="pills-skipped" aria-selected="false">Skipped Tests <span class="badge badge-light">0</span></a>
+            </li>
+            </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-summary" role="tabcard" aria-labelledby="pills-summary-tab">
+<div class="row">
+  <div class="col-md-9 col-lg-12 main">
+   <h1 class="display-2 text-center">Newman Run Dashboard</h1>
+   <h5 class="text-center">Thursday, 18 January 2024 21:16:41</h5>
+   <div class="row">
+    <div class="col-lg-3 col-md-6">
+     <div class="card text-white card-success">
+      <div class="card-body bg-success">
+       <div class="rotate">
+        <i class="fa fa-retweet fa-5x"></i>
+       </div>
+       <h6 class="text-uppercase">Total Iterations</h6>
+       <h1 class="display-1">1</h1>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+     <div class="card text-white card-danger">
+      <div class="card-body bg-success">
+       <div class="rotate">
+        <i class="fa fa-list fa-4x"></i>
+       </div>
+       <h6 class="text-uppercase">Total Assertions</h6>
+       <h1 class="display-1">9</h1>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+     <div class="card text-white card-info">
+      <div class="card-body bg-success">
+       <div class="rotate">
+        <i class="fa fa-plus-circle fa-5x"></i>
+       </div>
+       <h6 class="text-uppercase">Total Failed Tests</h6>
+       <h1 class="display-1">0</h1>
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+     <div class="card text-white card-warning">
+      <div class="card-body bg-success">
+       <div class="rotate">
+        <i class="fa fa-share fa-5x"></i>
+       </div>
+       <h6 class="text-uppercase">Total Skipped Tests</h6>
+       <h1 class="display-1">0</h1>
+      </div>
+     </div>
+    </div>
+   </div>
+   <hr>
+    <div class="row">
+    <div class="col">
+        <div class="row">
+        <div class="col-sm-12 mb-3">
+            <div class="card border-info">
+                <div class="card-body">
+                <h5 class="card-title text-uppercase text-white text-center bg-info">File Information</h5>
+                <span><i class="fas fa-file-code"></i></span><strong> Collection:</strong> Soum Assessment<br>
+                
+                
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-12 mb-3">
+            <div class="card border-info">
+                <div class="card-body">
+                <h5 class="card-title text-uppercase text-white text-center bg-info">Timings and Data</h5>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Total run duration:</strong> 947ms<br>
+                <span><i class="fas fa-database"></i></span><strong> Total data received:</strong> 48.21KB<br>
+                <span><i class="fas fa-stopwatch"></i></span><strong> Average response time:</strong> 893ms<br>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-12 mb-3">
+            <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-inverse">
+                    <tr class="text-center">
+                        <th class="text-uppercase">Summary Item</th>
+                        <th class="text-uppercase">Total</th>
+                        <th class="text-uppercase">Failed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Requests</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">0</td>
+                    </tr>
+                    <tr>
+                        <td>Prerequest Scripts</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">0</td>
+                    </tr>
+                    <tr>
+                        <td>Test Scripts</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">0</td>
+                    </tr>
+                    <tr class="">
+                        <td>Assertions</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">0</td>
+                    </tr>
+                    <tr class="">
+                        <td>Skipped Tests</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">-</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+    <hr>
+   </div>
+   </div>
+  </div>
+ </div>
+        </div>
+            <div class="tab-pane fade" id="pills-failed" role="tabcard" aria-labelledby="pills-failed-tab">
+                <button id="topOfFailuresScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()" style="display: none;">Go To Top</button>
+
+                <div class="alert alert-success text-uppercase text-center">
+                     <br><br><h1 class="text-center">There are no failed tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-skipped" role="tabcard" aria-labelledby="pills-skipped-tab">
+                <button id="topOfSkippedScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()" style="display: none;">Go To Top</button>
+
+                <div class="alert alert-success text-uppercase text-center">
+                    <br><br><h1 class="text-center">There are no skipped tests <span><i class="far fa-thumbs-up"></i></span></h1><br><br>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-requests" role="tabcard" aria-labelledby="pills-requests-tab">
+
+            <button id="topOfRequestsScreen" class="btn btn-outline-success btn-sm backToTop" onclick="topFunction()" style="display: none;">Go To Top</button>
+
+            <div class="btn-group float-right" role="group" aria-label="Button Group">
+                <button id="openAll" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px; display: block;">Expand Folders</button>
+                <button id="openAllRequests" class="btn btn-outline-success btn-sm float-right" style="text-align: center; width: 140px; display: block;">Expand Requests</button>
+            </div>
+
+    <div class="text-uppercase" id="execution-menu">
+        <h5>1 Iteration available to view</h5>
+        
+        <nav class="table-responsive">
+        <ul class="nav single-line-tabs" id="iterationList">
+        <li id="iteration-0" class="custom-tab itPassed" style="border-bottom: 3px solid rgb(3, 42, 51);">1</li></ul>
+        </nav>
+    </div>
+    <h6 class="text-uppercase text-muted" id="iterationSelected" style="padding-top: 10px;">Iteration 1 selected</h6>
+	<div class="tab-content" id="execution-data">
+            <div id="folder-8902b688-cb4f-45bb-be0d-84337cbd7f43" class="card-deck iteration-0" style="display: block;">
+            <div class="row iteration-0" style="display: block;">
+                <div class="col-sm-12 mb-3 iteration-0" style="display: block;">
+                <div class="card iteration-0" style="display: block;">
+                    <div class="card-header  bg-success iteration-0" style="display: block;">
+                        <a data-toggle="collapse" href="file:///Users/shimaa/Documents/newman/Soum%20Assessment-2024-01-18-19-16-41-713-0.html#" data-target="#collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43" aria-expanded="false" aria-controls="collapse" id="requests-8902b688-cb4f-45bb-be0d-84337cbd7f43" class="collapsed text-white z-block">
+                    Iteration: 1 - Get Product Data <i class="float-lg-right fa fa-chevron-down" style="padding-top: 5px;"></i>
+                </a>
+                    </div>
+                    <div id="collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43" class="collapse" aria-labelledby="requests-8902b688-cb4f-45bb-be0d-84337cbd7f43">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12 mb-3">
+                            <div class="card-deck">
+                                <div class="card border-info" style="width: 50rem;">
+                                    <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-white text-center bg-info">Request Description</h5>
+                                        <div class="dyn-height">
+                                            <code class="renderMarkdown"><p><strong>cases to validate the functionality and performance of the API.</strong></p>
+<ol>
+<li>Test Case: Verify API response status code =&gt; Assert that the response status code is 200 (OK).</li>
+<li>Test Case: Verify API response format =&gt; Assert that the response content type is "application/json".</li>
+<li>Test Case: Response time is less than 5000ms =&gt; Measures the time taken for one system node to respond to the request of another. It is the time a system takes to reach a specific input until the process is over.</li>
+<li>Test Case: Check response message =&gt; Assert that the first attribute in the response body that called "message" have value "Get Products successfully"</li>
+<li>Test Case: Number of Products per Page =&gt; Assert that the number of products returned in the response matches the specified size.</li>
+<li>Test Case: Check data type of the response =&gt; Assert that the data type of the product has the valid values.</li>
+<li>Test Case: Check results array inside the response data properties =&gt; Assert that the returned product result array (e.g., grade, score, status) is valid and matches the expected values.</li>
+<li>Test Case: Check the information for response data =&gt; Assert that the returned product information (e.g., total, pages) is valid and matches the expected values.</li>
+<li>Test Case: Schema is valid =&gt; Schema Validation to allows you to check if incoming traffic complies with a previously supplied API schema.</li>
+</ol>
+</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 mb-3">
+                                <div class="card-deck">
+                                <div class="card border-info" style="width: 50rem;">
+                                    <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-white text-center bg-info">Request Information</h5>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request Method:</strong> <span class="badge-outline-success badge badge-success"> GET</span><br>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Request URL:</strong> <a href="https://api.qa.soum.sa/api-v2/rest/api/v1/product/?page%20number=2&amp;size=3" target="_blank">https://api.qa.soum.sa/api-v2/rest/api/v1/product/?page%20number=2&amp;size=3</a><br>
+                                    </div>
+                                </div>
+                                <div class="card border-info" style="width: 50rem;">
+                                    <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-white text-center bg-info">Response Information</h5>
+                                    <span><i class="fas fa-info-circle"></i></span><strong> Response Code:</strong> <span class="float-right badge-outline badge badge-success"> 200 - OK</span><br>
+                                    <span><i class="fas fa-stopwatch"></i></span><strong> Mean time per request:</strong> <span class="float-right badge-outline badge badge-success"> 893ms</span><br>
+                                    <span><i class="fas fa-database"></i></span><strong> Mean size per request:</strong> <span class="float-right badge-outline badge badge-success"> 48.21KB</span><br>
+                                    <hr>
+                                    <h5 class="card-title text-uppercase text-white text-center bg-info">Test Pass Percentage</h5>
+                                    <div>
+                                        <div class="progress" style="height: 40px;">
+                                            <div class="progress-bar  bg-success" style="width: 100%" role="progressbar">
+                                            <h5 style="padding-top:5px;"><strong>100 %</strong></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 mb-3">
+                                <div class="card-deck">
+                                <div class="card border-info" style="width: 50rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-uppercase text-white text-center bg-info">Request Headers</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                            <thead class="thead-light text-center"><tr><th>Header Name</th><th>Header Value</th></tr></thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-nowrap">lang</td>
+                                                        <td class="text-wrap"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">User-Agent</td>
+                                                        <td class="text-wrap">PostmanRuntime/7.36.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Accept</td>
+                                                        <td class="text-wrap">*/*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Cache-Control</td>
+                                                        <td class="text-wrap">no-cache</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Postman-Token</td>
+                                                        <td class="text-wrap">3bea12a1-a462-462c-8c23-3f5ddbb83099</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Host</td>
+                                                        <td class="text-wrap">api.qa.soum.sa</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Accept-Encoding</td>
+                                                        <td class="text-wrap">gzip, deflate, br</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-nowrap">Connection</td>
+                                                        <td class="text-wrap">keep-alive</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-12 mb-3">
+                            <div class="card-deck">
+                            <div class="card border-info" style="width: 50rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-white text-center bg-info">Response Headers</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                        <thead class="thead-light text-center"><tr><th>Header Name</th><th>Header Value</th></tr></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-nowrap">Content-Type</td>
+                                                    <td class="text-wrap">application/json; charset=utf-8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Transfer-Encoding</td>
+                                                    <td class="text-wrap">chunked</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Connection</td>
+                                                    <td class="text-wrap">keep-alive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Date</td>
+                                                    <td class="text-wrap">Thu, 18 Jan 2024 19:16:41 GMT</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">X-Powered-By</td>
+                                                    <td class="text-wrap">Express</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Access-Control-Allow-Origin</td>
+                                                    <td class="text-wrap">*</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Access-Control-Allow-Methods</td>
+                                                    <td class="text-wrap">GET, POST, OPTIONS, PUT, PATCH, DELETE</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Access-Control-Allow-Headers</td>
+                                                    <td class="text-wrap">X-Requested-With,content-type</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Access-Control-Allow-Credentials</td>
+                                                    <td class="text-wrap">true</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">x-frame-options</td>
+                                                    <td class="text-wrap">SAMEORIGIN</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">x-xss-protection</td>
+                                                    <td class="text-wrap">1; mode=block</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">ETag</td>
+                                                    <td class="text-wrap">W/"c0d7-etSuJU9aufBaZC50P6WCcNCb86g"</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Vary</td>
+                                                    <td class="text-wrap">Accept-Encoding</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Content-Encoding</td>
+                                                    <td class="text-wrap">gzip</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Strict-Transport-Security</td>
+                                                    <td class="text-wrap">max-age=15724800; includeSubDomains</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">X-Cache</td>
+                                                    <td class="text-wrap">Miss from cloudfront</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">Via</td>
+                                                    <td class="text-wrap">1.1 1b866e6eb5f6e3ef570f3588da8a7b3a.cloudfront.net (CloudFront)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">X-Amz-Cf-Pop</td>
+                                                    <td class="text-wrap">MRS52-P2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-nowrap">X-Amz-Cf-Id</td>
+                                                    <td class="text-wrap">Mw08uxeN2EC4iSmR3_LXkZV7jfc4Cq_tDoRwshbqsbh1qsSS5OXLgQ==</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-12 mb-3">
+                            <div class="card-deck">
+                            <div class="card border-info" style="width: 50rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-white text-center bg-info">Response Body</h5>
+                                        <div class="dyn-height">
+                                                <pre><code id="copyText-56724e6e-e2d8-4619-aac6-dc470ef8124e" class="prettyPrint hljs json">{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Get Products successfully"</span>,
+  <span class="hljs-attr">"responseData"</span>: {
+    <span class="hljs-attr">"info"</span>: {
+      <span class="hljs-attr">"total"</span>: <span class="hljs-number">440494</span>,
+      <span class="hljs-attr">"pages"</span>: <span class="hljs-number">146832</span>
+    },
+    <span class="hljs-attr">"results"</span>: [
+      {
+        <span class="hljs-attr">"product_images"</span>: [
+          <span class="hljs-string">"https://cdn.soum.sa/soum-prod/products/image-1618213624780.jpg"</span>
+        ],
+        <span class="hljs-attr">"defected_images"</span>: [],
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"بدر"</span>,
+        <span class="hljs-attr">"answer_to_questions"</span>: <span class="hljs-string">"[{\"question\":\"Is your screen broken/cracked or bent?\",\"answer\":\"Yes, minor break\"},{\"question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"answer\":\"Yes, issues with wifi\"},{\"question\":\"Do you have any issues with your battery's health/or battery charing?\",\"answer\":\"Yes, features get disabled when your phone is plugged in\"},{\"question\":\"Are there any display defects in your screen?\",\"answer\":\"Yes, dead pixels/black dots \"},{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"Yes, mute slider has some issues\"},{\"question\":\"Do you have  any issues with your phone's cameras?\",\"answer\":\"Yes, back camera doesn’t work\"},{\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader? \",\"answer\":\"No, just like a new phone\"},{\"question\":\"Do you have any issues with the phone's speakers?\",\"answer\":\"Yes, it is not loud enough\"},{\"question\":\"Are there scratches on your screen?\",\"answer\":\"Yes, minor scratches that can bearly be seen \"},{\"question\":\"Whats is your device's age?\",\"answer\":\"1-2 years\"},{\"question\":\"Whats is your battery maximum charging level? (you can find it in Settings &gt; Battery &gt; Battery Health)\",\"answer\":\"90%-85%\"}]"</span>,
+        <span class="hljs-attr">"answer_to_questions_ar"</span>: <span class="hljs-string">"[{\"question\":\"هل يوجد كسر أو  انحناء في شاشتك؟\",\"answer\":\"نعم، كسر بسيط\"},{\"question\":\"هل يوجد أي مشكلة في الواي فاي، البلوتوث، او الوصول للشبكة (4G)؟\",\"answer\":\"نعم، يوجد مشكلة في الواي فاي\"},{\"question\":\"هل يوجد أي مشكلة في بطارية الجهاز وعمرها أو شحنها؟\",\"answer\":\"نعم، بعض تتعطل بعض الميزات عند شحن الجهاز \"},{\"question\":\"هل يوجد أي خلل في شاشتك؟\",\"answer\":\"نعم، مناطق لا تعمل أو نقاط سوداء\"},{\"question\":\"هل يوجد أي مشكلة في أماكن الادخال أو الأزرار أو مفاتيح الجهاز؟\",\"answer\":\"نعم، يوجد مشكلة في مفتاح تصميت الجهاز \"},{\"question\":\"هل يوجد أي مشكلة في كاميرا الجهاز؟\",\"answer\":\"نعم، الكاميرا الخلفية لا تعمل \"},{\"question\":\"هل يوجد أي مشكلة في نظام التعرف على الوجه (FaceID) أو البصمة؟\",\"answer\":\"لا، يعمل مثل الجهاز الجديد\"},{\"question\":\"هل يوجد أي مشكلة في سماعات الجهاز؟\",\"answer\":\"نعم، الصوت ليس عالي كما يجب\"},{\"question\":\"هل يوجد خدوش في شاشتك؟\",\"answer\":\"نعم، خدوش بسيطة يمكن رؤيتها بصعوبة\"},{\"question\":\"ماهو عمر جهازك؟\",\"answer\":\"سنة إلى سنتين\"},{\"question\":\"ماهو عمر البطارية الحالي؟ ـ(يمكنك إيجاده من الإعدادات &gt; البطارية &gt; عمر البطارية)\",\"answer\":\"90%-85%\"}]"</span>,
+        <span class="hljs-attr">"answer_to_questions_migration"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"answer_to_questions_ar_migration"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"unansweredquestions"</span>: <span class="hljs-string">"[{\"_id\":\"61432735f493256f045d46be\",\"answers\":[{\"_id\":\"61432735f493256f045d46bf\",\"sub_choices\":[],\"yes_answers\":[\"Yes, screen replacement\",\"Yes, opened the phone for reasons other than the screen replacement\"],\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":-6.4,\"yes_question\":\"Have you ever replaced your screen or conducted a repair that require opening the phone?\",\"no_questions\":null},{\"_id\":\"61432735f493256f045d46c0\",\"sub_choices\":[],\"yes_answers\":null,\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0,\"yes_question\":null,\"no_questions\":[{\"answers\":[\"Never\"],\"_id\":\"61432735f493256f045d46c1\",\"question\":\"Have you ever replaced your screen or conducted a repair that require opening the phone?\"}]}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":1,\"question_en\":\"Screen replacement or a repair requiring opening the mobile\",\"question_ar\":\"استبدلت الشاشة أو فتحت الجهاز للصيانة\",\"type\":\"yes-no-without-options\"},{\"_id\":\"6143278af493256f045d46c2\",\"answers\":[{\"_id\":\"6143278bf493256f045d46c3\",\"sub_choices\":[{\"_id\":\"6143278bf493256f045d46c7\",\"yes_answers\":[\"Yes, colored lines and/or circles across the screen\",\"Yes, dead pixels/black dots\",\"Yes, screen can't reach max brightness\"],\"option_en\":\"Dead pixels، black dots or colored lines\",\"option_ar\":\"مناطق سوداء اوخطوط ملونة  (خطوط او نقاط على الشاشة)\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/deadpixels.png\",\"yes_question\":\"Are there any display defects in your screen?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46c8\",\"yes_answers\":[\"Yes, minor break\"],\"option_en\":\"Minor Break\",\"option_ar\":\"كسر بسيط \",\"score\":-10.6,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/minor-crack.png\",\"yes_question\":\"Is your screen broken/cracked or bent?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46c9\",\"yes_answers\":[\"Yes, major break\"],\"option_en\":\"Major Break\",\"option_ar\":\"كسر رئيسي\",\"score\":-12.7,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/major-crack.png\",\"yes_question\":\"Is your screen broken/cracked or bent?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46ca\",\"yes_answers\":[\"Yes, major scratches that can be seen easily\"],\"option_en\":\"Major scratches that can be seen easily\",\"option_ar\":\"خدوش رئيسية يمكن رؤيتها بسهولة\",\"score\":-2.1,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/scratches.png\",\"yes_question\":\"Are there scratches on your screen?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46cb\",\"yes_answers\":[\"Yes, minor scratches that can bearly be seen\"],\"option_en\":\"Minor scratches that can bearly be seen\",\"option_ar\":\"خدوش بسيطة يمكن رؤيتها بصعوبة\",\"score\":-1.3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/scratches.png\",\"yes_question\":\"Are there scratches on your screen?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46cc\",\"yes_answers\":null,\"option_en\":\"Scratches on phone body (back or edges)\",\"option_ar\":\"خدوش في جسم الجهاز (الظهر والحواف)\",\"score\":-1.3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/body-scratches.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46cd\",\"yes_answers\":null,\"option_en\":\"Bents or curves\",\"option_ar\":\"صدمات أو إنحناء \",\"score\":-8.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/bent-phone.png\",\"yes_question\":null,\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46c4\",\"sub_choices\":[],\"yes_answers\":null,\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0,\"yes_question\":null,\"no_questions\":[{\"answers\":[\"No, there are no issues at all\"],\"_id\":\"6143278bf493256f045d46c5\",\"question\":\"Are there any display defects in your screen?\"},{\"answers\":[\"No, not a single scratch\"],\"_id\":\"6143278bf493256f045d46c6\",\"question\":\"Are their scratches on your screen?\"},{\"answers\":[\"Never\"],\"_id\":\"6143278bf493256f045d46c7\",\"question\":\"Is your screen broken/cracked or bent?\"}]}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":2,\"question_en\":\"Problems with the mobile screen or body (scratches, dents, cracks, dead pixels, lines)\",\"question_ar\":\" عيوب في شاشة أو جسم الجوال (خدوش، كسور، خطوط او دوائر ملونة، صدمات)\",\"type\":\"yes-no-with-options\"},{\"_id\":\"61432bd6f493256f045d46ce\",\"answers\":[{\"_id\":\"61432bd6f493256f045d46cf\",\"sub_choices\":[{\"_id\":\"61432bd6f493256f045d46d6\",\"yes_answers\":[\"Yes, front camera doesn’t work\",\"Yes, back camera doesn’t work\",\"Can't fully zoom-in/zoom-out in the front or back camera\",\"Flash doesn’t work properly\"],\"option_en\":\"Camera broken, scratched or not working\",\"option_ar\":\"احدى الكاميرات لا تعمل، مكسورة او بها خدش \",\"score\":-3.8,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/broken-camera.png\",\"yes_question\":\"Do you have  any issues with your phone's cameras?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d7\",\"yes_answers\":[\"Yes, home button or some other issue\"],\"option_en\":\"one of the buttons isn't working\",\"option_ar\":\"مشكلة في أحد ازرار أو مفاتيح الجهاز\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/buttons-problem.png\",\"yes_question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d8\",\"yes_answers\":[\"Yes, some areas of the screen doesn’t respond to touch\"],\"option_en\":\"Touch problems\",\"option_ar\":\"مشاكل في اللمس\",\"score\":-3.8,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/touch-problem.png\",\"yes_question\":\"Are there any display defects in your screen?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d9\",\"yes_answers\":[\"Yes, issues with wifi\"],\"option_en\":\"Problems with WiFi\",\"option_ar\":\"مشاكل في الواي فاي\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/wifi.png\",\"yes_question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46da\",\"yes_answers\":[\"Yes, issues with bluetooth\"],\"option_en\":\"Problems with Bluetooth \",\"option_ar\":\"مشاكل في البلوتوث\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/bluetooth.png\",\"yes_question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46db\",\"yes_answers\":[\"Yes, issues with cellular network (or 4G)\"],\"option_en\":\"Problems with cellular data\",\"option_ar\":\"مشاكل في الوصول الى الشبكة 4G \",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/cell-data-problem.png\",\"yes_question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46dc\",\"yes_answers\":[\"Yes, it doesn't work\",\"Yes, it is not loud enough\"],\"option_en\":\"Issues with phone speakers\",\"option_ar\":\"مشكلة في سماعات الجهاز \",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/audio.png\",\"yes_question\":\"Do you have any issues with the phone's speakers?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46dd\",\"yes_answers\":[\"Yes, it doesn't work at all\"],\"option_en\":\"Problems with FaceID, Fingerprint or TouchID\",\"option_ar\":\"مشاكل في نظام التعرف على الوجه أو البصمة\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/touch-problem.png\",\"yes_question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46de\",\"yes_answers\":null,\"option_en\":\"Problems with the Microphone\",\"option_ar\":\"مشكلة في المايكرفون\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/mic-problem.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46df\",\"yes_answers\":[\"Yes, SIM tray has some issues\"],\"option_en\":\"SIM tray has some issues\",\"option_ar\":\"مشكلة في منطقة إدخال الشريحة\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/simtray.png\",\"yes_question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46e0\",\"yes_answers\":[\"Yes, batter charging plug-in doesn't work sometimes\"],\"option_en\":\"battery charging plug-in doesn't work properly\",\"option_ar\":\"منطقة إدخال الشاحن لا تعمل أحيانا\",\"score\":-3.8,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charging-problem.png\",\"yes_question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46e1\",\"yes_answers\":[\"Yes, it dies when it reaches 15% or 20% level\",\"Yes, features get disabled when your phone is plugged in\",\"Yes, battery decline very rapidly after unplugging\",\"Yes, some other issue\"],\"option_en\":\"Problems with the phone battery (Drains fast, Gets hot, Shut down, Slow charging)\",\"option_ar\":\"مشاكل في البطارية (شحن بطيء، سخونة، اغلاق مفاجئ)\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charging-problem.png\",\"yes_question\":\"Do you have any issues with your battery's health/or battery charing?\",\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d0\",\"sub_choices\":[],\"yes_answers\":null,\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0,\"yes_question\":null,\"no_questions\":[{\"answers\":[\"No, no issues whatsoever\"],\"_id\":\"61432bd6f493256f045d46d1\",\"question\":\"Do you have any issues with your battery's health/or battery charging?\"},{\"answers\":[\"No, all works fine\"],\"_id\":\"61432bd6f493256f045d46d2\",\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\"},{\"answers\":[\"No, just like a new phone\"],\"_id\":\"61432bd6f493256f045d46d3\",\"question\":\"Do you have  any issues with your phone's cameras?\"},{\"answers\":[\"No, just like a new phone\"],\"_id\":\"61432bd6f493256f045d46d4\",\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader?\"},{\"answers\":[\"No, no issues whatsoever\"],\"_id\":\"61432bd6f493256f045d46d5\",\"question\":\"Do you have any issues with the phone's speakers?\"},{\"answers\":[\"No, there are no issues\"],\"_id\":\"61432bd6f493256f045d46d6\",\"question\":\"Do you have any issues with your cellular network (4G), wifi or bluetooth?\"}]}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":3,\"question_en\":\"Functional problems with the mobile (wifi, speaker, touch, etc.)\",\"question_ar\":\"مشاكل في مزايا الجوال (وايفاي، اللمس، البطارية..)\",\"type\":\"yes-no-with-options\"},{\"_id\":\"61432d0af493256f045d46e2\",\"answers\":[{\"_id\":\"61432d0bf493256f045d46e3\",\"sub_choices\":[{\"_id\":\"61432d0bf493256f045d46e4\",\"yes_answers\":[\"Original Charger\"],\"option_en\":\"Original Charger\",\"option_ar\":\"شاحن أصلي \",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charger.png\",\"yes_question\":\"Do you have the following?\",\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e5\",\"yes_answers\":null,\"option_en\":\"Original Headphones\",\"option_ar\":\"سماعة أصلية \",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/earphones.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e6\",\"yes_answers\":null,\"option_en\":\"Screen Protector\",\"option_ar\":\"شاشة حماية\",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/screenprotector.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e7\",\"yes_answers\":null,\"option_en\":\"Original Box\",\"option_ar\":\"كرتون اصلي\",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/phone-box.png\",\"yes_question\":null,\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"614aa29e93787a68907fc86c\",\"sub_choices\":[],\"yes_answers\":[],\"no_questions\":[{\"answers\":[\"No charger \",\"Not Original Charger\"],\"_id\":\"617fbab4cacc358646f54d8c\",\"question\":\"Do you have the following?\"}],\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":4,\"question_en\":\"Do you have any of the follwing (Strap, Box or charger)?\",\"question_ar\":\"هل لديك أي مما يلي (حزام أو صندوق أو شاحن)؟\",\"type\":\"yes-no-with-options\"}]"</span>,
+        <span class="hljs-attr">"unmatchedquestions"</span>: <span class="hljs-string">"[{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"Yes, mute slider has some issues\"},{\"question\":\"Are there any display defects in your screen?\",\"answer\":\"Yes, dead pixels/black dots \"},{\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader? \",\"answer\":\"No, just like a new phone\"}]"</span>,
+        <span class="hljs-attr">"grade"</span>: <span class="hljs-string">"Extensive Use"</span>,
+        <span class="hljs-attr">"grade_ar"</span>: <span class="hljs-string">"مستخدم بشدة"</span>,
+        <span class="hljs-attr">"score"</span>: <span class="hljs-number">71.5</span>,
+        <span class="hljs-attr">"previous_grade"</span>: <span class="hljs-string">"Extensive Use"</span>,
+        <span class="hljs-attr">"previous_score"</span>: <span class="hljs-number">72.8</span>,
+        <span class="hljs-attr">"bidding"</span>: [],
+        <span class="hljs-attr">"save_as_draft_step"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"current_bid_price"</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">"favourited_by"</span>: [],
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Delete"</span>,
+        <span class="hljs-attr">"sell_status"</span>: <span class="hljs-string">"Available"</span>,
+        <span class="hljs-attr">"questionnaire_migration_status"</span>: <span class="hljs-string">"COMPLETED"</span>,
+        <span class="hljs-attr">"isApproved"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"isExpired"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"isFraudDetected"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"verified_date"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"isListedBefore"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"highlights"</span>: [],
+        <span class="hljs-attr">"attributes"</span>: [],
+        <span class="hljs-attr">"highlightsAdded"</span>: <span class="hljs-string">"isHighlighted"</span>,
+        <span class="hljs-attr">"isReported"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"reportedBy"</span>: [],
+        <span class="hljs-attr">"isVerifiedByAdmin"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"isPriceUpdating"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"variant_attributes_selections"</span>: [],
+        <span class="hljs-attr">"isBiddingProduct"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"trade_in"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"trade_in_status"</span>: <span class="hljs-string">"InProgress"</span>,
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6073faf81f2faf379bd109fc"</span>,
+        <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"6057280c7b6600be053415d6"</span>,
+        <span class="hljs-attr">"category_id"</span>: <span class="hljs-string">"60661c60fdc090d1ce2d4914"</span>,
+        <span class="hljs-attr">"brand_id"</span>: <span class="hljs-string">"6069faf484541d77f553167a"</span>,
+        <span class="hljs-attr">"model_id"</span>: <span class="hljs-string">"6069fb8084541d07be53167b"</span>,
+        <span class="hljs-attr">"varient"</span>: <span class="hljs-string">"256 GB"</span>,
+        <span class="hljs-attr">"varient_ar"</span>: <span class="hljs-string">"٢٥٦ غيغابايت"</span>,
+        <span class="hljs-attr">"body_cracks"</span>: <span class="hljs-string">"no"</span>,
+        <span class="hljs-attr">"sell_price"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"bid_price"</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">"pick_up_address"</span>: {
+          <span class="hljs-attr">"address_id"</span>: <span class="hljs-string">"606c762d713153e90bab76d8"</span>,
+          <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Shsjsj"</span>,
+          <span class="hljs-attr">"city"</span>: <span class="hljs-string">"'abal 'abla"</span>,
+          <span class="hljs-attr">"postal_code"</span>: <span class="hljs-string">"12222"</span>,
+          <span class="hljs-attr">"address_type"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">""</span>
+        },
+        <span class="hljs-attr">"createdDate"</span>: <span class="hljs-string">"2021-04-12T07:47:04.861Z"</span>,
+        <span class="hljs-attr">"updatedDate"</span>: <span class="hljs-string">"2021-11-15T13:33:12.534Z"</span>,
+        <span class="hljs-attr">"__v"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"expiryDate"</span>: <span class="hljs-string">"2021-05-12T07:47:04.861Z"</span>,
+        <span class="hljs-attr">"code"</span>: <span class="hljs-string">"lkXpet9"</span>,
+        <span class="hljs-attr">"varient_id"</span>: <span class="hljs-string">"632b3790f49ff67c8b401fab"</span>,
+        <span class="hljs-attr">"response"</span>: <span class="hljs-string">"619261986b96d000297b8786"</span>,
+        <span class="hljs-attr">"model_migration_source"</span>: <span class="hljs-string">"Updated old model_id = 6069fb8084541d07be53167b with 6069fb8084541d07be53167b"</span>,
+        <span class="hljs-attr">"model_variant_map_id"</span>: <span class="hljs-string">"636085f33b98a88c5b951241"</span>,
+        <span class="hljs-attr">"variant_migration_source"</span>: <span class="hljs-string">"Updated old variant_id with from 6069fbd484541db57053167c to 632b3790f49ff67c8b401fab"</span>,
+        <span class="hljs-attr">"rejected_reasons"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"rejected_timestamp"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"image_updated"</span>: <span class="hljs-string">"2023-09-12T14:00:37.948Z"</span>,
+        <span class="hljs-attr">"verifiedByAdminDate"</span>: <span class="hljs-string">"2024-01-18T19:16:41.584Z"</span>,
+        <span class="hljs-attr">"category"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"60661c60fdc090d1ce2d4914"</span>,
+          <span class="hljs-attr">"category_name_ar"</span>: <span class="hljs-string">"جوالات"</span>,
+          <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>
+        },
+        <span class="hljs-attr">"brand"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6069faf484541d77f553167a"</span>,
+          <span class="hljs-attr">"brand_name_ar"</span>: <span class="hljs-string">"أبل"</span>
+        },
+        <span class="hljs-attr">"model"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6069fb8084541d07be53167b"</span>,
+          <span class="hljs-attr">"model_name_ar"</span>: <span class="hljs-string">"آيفون ١٢"</span>
+        },
+        <span class="hljs-attr">"variant"</span>: [
+          {
+            <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"632b3790f49ff67c8b401fab"</span>
+          }
+        ],
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"6073faf81f2faf379bd109fc"</span>
+      },
+      {
+        <span class="hljs-attr">"product_images"</span>: [
+          <span class="hljs-string">"https://cdn.soum.sa/soum-prod/products/image-1618213420926.jpg"</span>
+        ],
+        <span class="hljs-attr">"defected_images"</span>: [],
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"بدر"</span>,
+        <span class="hljs-attr">"answer_to_questions"</span>: <span class="hljs-string">"[{\"question\":\"Is your screen broken/cracked or bent?\",\"answer\":\"Yes, major break\"},{\"question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"answer\":\"Yes, issues with bluetooth\"},{\"question\":\"Do you have any issues with your battery's health/or battery charing?\",\"answer\":\"Yes, it dies when it reaches 15% or 20% level\"},{\"question\":\"Are there any display defects in your screen?\",\"answer\":\"Yes, colored lines and/or circles across the screen \"},{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"Yes, SIM tray has some issues\"},{\"question\":\"Do you have  any issues with your phone's cameras?\",\"answer\":\"Yes, front camera doesn’t work\"},{\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader? \",\"answer\":\"Yes, it doesn't work at all\"},{\"question\":\"Do you have any issues with the phone's speakers?\",\"answer\":\"Yes, it doesn't work\"},{\"question\":\"Are there scratches on your screen?\",\"answer\":\"Yes, major scratches that can be seen easily \"},{\"question\":\"Whats is your device's age?\",\"answer\":\"Less than a year\"},{\"question\":\"Whats is your battery maximum charging level? (you can find it in Settings &gt; Battery &gt; Battery Health)\",\"answer\":\"90%+\"}]"</span>,
+        <span class="hljs-attr">"answer_to_questions_ar"</span>: <span class="hljs-string">"[{\"question\":\"هل يوجد كسر أو  انحناء في شاشتك؟\",\"answer\":\"نعم، كسر رئيسي\"},{\"question\":\"هل يوجد أي مشكلة في الواي فاي، البلوتوث، او الوصول للشبكة (4G)؟\",\"answer\":\"نعم، يوجد مشكلة في البلوتوث\"},{\"question\":\"هل يوجد أي مشكلة في بطارية الجهاز وعمرها أو شحنها؟\",\"answer\":\"نعم،  يغلق الجهاز عند وصول مستوى البطارية لـ 15%-20%\"},{\"question\":\"هل يوجد أي خلل في شاشتك؟\",\"answer\":\"نعم، خطوط أو دوائر ملونة ظاهرة في الشاشة\"},{\"question\":\"هل يوجد أي مشكلة في أماكن الادخال أو الأزرار أو مفاتيح الجهاز؟\",\"answer\":\"نعم، يوجد مشكلة في منطقة إدخال الشريحة \"},{\"question\":\"هل يوجد أي مشكلة في كاميرا الجهاز؟\",\"answer\":\"نعم الكاميرا الامامية لا تعمل \"},{\"question\":\"هل يوجد أي مشكلة في نظام التعرف على الوجه (FaceID) أو البصمة؟\",\"answer\":\"نعم، لا يعمل  \"},{\"question\":\"هل يوجد أي مشكلة في سماعات الجهاز؟\",\"answer\":\"نعم، لا تعمل \"},{\"question\":\"هل يوجد خدوش في شاشتك؟\",\"answer\":\"نعم، خدوش رئيسية يمكن رؤيتها بسهولة \"},{\"question\":\"ماهو عمر جهازك؟\",\"answer\":\"أقل من سنة\"},{\"question\":\"ماهو عمر البطارية الحالي؟ ـ(يمكنك إيجاده من الإعدادات &gt; البطارية &gt; عمر البطارية)\",\"answer\":\"90%+\"}]"</span>,
+        <span class="hljs-attr">"answer_to_questions_migration"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"answer_to_questions_ar_migration"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"unansweredquestions"</span>: <span class="hljs-string">"[{\"_id\":\"61432735f493256f045d46be\",\"answers\":[{\"_id\":\"61432735f493256f045d46bf\",\"sub_choices\":[],\"yes_answers\":[\"Yes, screen replacement\",\"Yes, opened the phone for reasons other than the screen replacement\"],\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":-6.4,\"yes_question\":\"Have you ever replaced your screen or conducted a repair that require opening the phone?\",\"no_questions\":null},{\"_id\":\"61432735f493256f045d46c0\",\"sub_choices\":[],\"yes_answers\":null,\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0,\"yes_question\":null,\"no_questions\":[{\"answers\":[\"Never\"],\"_id\":\"61432735f493256f045d46c1\",\"question\":\"Have you ever replaced your screen or conducted a repair that require opening the phone?\"}]}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":1,\"question_en\":\"Screen replacement or a repair requiring opening the mobile\",\"question_ar\":\"استبدلت الشاشة أو فتحت الجهاز للصيانة\",\"type\":\"yes-no-without-options\"},{\"_id\":\"6143278af493256f045d46c2\",\"answers\":[{\"_id\":\"6143278bf493256f045d46c3\",\"sub_choices\":[{\"_id\":\"6143278bf493256f045d46c7\",\"yes_answers\":[\"Yes, colored lines and/or circles across the screen\",\"Yes, dead pixels/black dots\",\"Yes, screen can't reach max brightness\"],\"option_en\":\"Dead pixels، black dots or colored lines\",\"option_ar\":\"مناطق سوداء اوخطوط ملونة  (خطوط او نقاط على الشاشة)\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/deadpixels.png\",\"yes_question\":\"Are there any display defects in your screen?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46c8\",\"yes_answers\":[\"Yes, minor break\"],\"option_en\":\"Minor Break\",\"option_ar\":\"كسر بسيط \",\"score\":-10.6,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/minor-crack.png\",\"yes_question\":\"Is your screen broken/cracked or bent?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46c9\",\"yes_answers\":[\"Yes, major break\"],\"option_en\":\"Major Break\",\"option_ar\":\"كسر رئيسي\",\"score\":-12.7,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/major-crack.png\",\"yes_question\":\"Is your screen broken/cracked or bent?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46ca\",\"yes_answers\":[\"Yes, major scratches that can be seen easily\"],\"option_en\":\"Major scratches that can be seen easily\",\"option_ar\":\"خدوش رئيسية يمكن رؤيتها بسهولة\",\"score\":-2.1,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/scratches.png\",\"yes_question\":\"Are there scratches on your screen?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46cb\",\"yes_answers\":[\"Yes, minor scratches that can bearly be seen\"],\"option_en\":\"Minor scratches that can bearly be seen\",\"option_ar\":\"خدوش بسيطة يمكن رؤيتها بصعوبة\",\"score\":-1.3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/scratches.png\",\"yes_question\":\"Are there scratches on your screen?\",\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46cc\",\"yes_answers\":null,\"option_en\":\"Scratches on phone body (back or edges)\",\"option_ar\":\"خدوش في جسم الجهاز (الظهر والحواف)\",\"score\":-1.3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/body-scratches.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46cd\",\"yes_answers\":null,\"option_en\":\"Bents or curves\",\"option_ar\":\"صدمات أو إنحناء \",\"score\":-8.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/bent-phone.png\",\"yes_question\":null,\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"6143278bf493256f045d46c4\",\"sub_choices\":[],\"yes_answers\":null,\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0,\"yes_question\":null,\"no_questions\":[{\"answers\":[\"No, there are no issues at all\"],\"_id\":\"6143278bf493256f045d46c5\",\"question\":\"Are there any display defects in your screen?\"},{\"answers\":[\"No, not a single scratch\"],\"_id\":\"6143278bf493256f045d46c6\",\"question\":\"Are their scratches on your screen?\"},{\"answers\":[\"Never\"],\"_id\":\"6143278bf493256f045d46c7\",\"question\":\"Is your screen broken/cracked or bent?\"}]}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":2,\"question_en\":\"Problems with the mobile screen or body (scratches, dents, cracks, dead pixels, lines)\",\"question_ar\":\" عيوب في شاشة أو جسم الجوال (خدوش، كسور، خطوط او دوائر ملونة، صدمات)\",\"type\":\"yes-no-with-options\"},{\"_id\":\"61432bd6f493256f045d46ce\",\"answers\":[{\"_id\":\"61432bd6f493256f045d46cf\",\"sub_choices\":[{\"_id\":\"61432bd6f493256f045d46d6\",\"yes_answers\":[\"Yes, front camera doesn’t work\",\"Yes, back camera doesn’t work\",\"Can't fully zoom-in/zoom-out in the front or back camera\",\"Flash doesn’t work properly\"],\"option_en\":\"Camera broken, scratched or not working\",\"option_ar\":\"احدى الكاميرات لا تعمل، مكسورة او بها خدش \",\"score\":-3.8,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/broken-camera.png\",\"yes_question\":\"Do you have  any issues with your phone's cameras?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d7\",\"yes_answers\":[\"Yes, home button or some other issue\"],\"option_en\":\"one of the buttons isn't working\",\"option_ar\":\"مشكلة في أحد ازرار أو مفاتيح الجهاز\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/buttons-problem.png\",\"yes_question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d8\",\"yes_answers\":[\"Yes, some areas of the screen doesn’t respond to touch\"],\"option_en\":\"Touch problems\",\"option_ar\":\"مشاكل في اللمس\",\"score\":-3.8,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/touch-problem.png\",\"yes_question\":\"Are there any display defects in your screen?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d9\",\"yes_answers\":[\"Yes, issues with wifi\"],\"option_en\":\"Problems with WiFi\",\"option_ar\":\"مشاكل في الواي فاي\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/wifi.png\",\"yes_question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46da\",\"yes_answers\":[\"Yes, issues with bluetooth\"],\"option_en\":\"Problems with Bluetooth \",\"option_ar\":\"مشاكل في البلوتوث\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/bluetooth.png\",\"yes_question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46db\",\"yes_answers\":[\"Yes, issues with cellular network (or 4G)\"],\"option_en\":\"Problems with cellular data\",\"option_ar\":\"مشاكل في الوصول الى الشبكة 4G \",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/cell-data-problem.png\",\"yes_question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46dc\",\"yes_answers\":[\"Yes, it doesn't work\",\"Yes, it is not loud enough\"],\"option_en\":\"Issues with phone speakers\",\"option_ar\":\"مشكلة في سماعات الجهاز \",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/audio.png\",\"yes_question\":\"Do you have any issues with the phone's speakers?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46dd\",\"yes_answers\":[\"Yes, it doesn't work at all\"],\"option_en\":\"Problems with FaceID, Fingerprint or TouchID\",\"option_ar\":\"مشاكل في نظام التعرف على الوجه أو البصمة\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/touch-problem.png\",\"yes_question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46de\",\"yes_answers\":null,\"option_en\":\"Problems with the Microphone\",\"option_ar\":\"مشكلة في المايكرفون\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/mic-problem.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46df\",\"yes_answers\":[\"Yes, SIM tray has some issues\"],\"option_en\":\"SIM tray has some issues\",\"option_ar\":\"مشكلة في منطقة إدخال الشريحة\",\"score\":-2.5,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/simtray.png\",\"yes_question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46e0\",\"yes_answers\":[\"Yes, batter charging plug-in doesn't work sometimes\"],\"option_en\":\"battery charging plug-in doesn't work properly\",\"option_ar\":\"منطقة إدخال الشاحن لا تعمل أحيانا\",\"score\":-3.8,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charging-problem.png\",\"yes_question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46e1\",\"yes_answers\":[\"Yes, it dies when it reaches 15% or 20% level\",\"Yes, features get disabled when your phone is plugged in\",\"Yes, battery decline very rapidly after unplugging\",\"Yes, some other issue\"],\"option_en\":\"Problems with the phone battery (Drains fast, Gets hot, Shut down, Slow charging)\",\"option_ar\":\"مشاكل في البطارية (شحن بطيء، سخونة، اغلاق مفاجئ)\",\"score\":-3,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charging-problem.png\",\"yes_question\":\"Do you have any issues with your battery's health/or battery charing?\",\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432bd6f493256f045d46d0\",\"sub_choices\":[],\"yes_answers\":null,\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0,\"yes_question\":null,\"no_questions\":[{\"answers\":[\"No, no issues whatsoever\"],\"_id\":\"61432bd6f493256f045d46d1\",\"question\":\"Do you have any issues with your battery's health/or battery charging?\"},{\"answers\":[\"No, all works fine\"],\"_id\":\"61432bd6f493256f045d46d2\",\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\"},{\"answers\":[\"No, just like a new phone\"],\"_id\":\"61432bd6f493256f045d46d3\",\"question\":\"Do you have  any issues with your phone's cameras?\"},{\"answers\":[\"No, just like a new phone\"],\"_id\":\"61432bd6f493256f045d46d4\",\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader?\"},{\"answers\":[\"No, no issues whatsoever\"],\"_id\":\"61432bd6f493256f045d46d5\",\"question\":\"Do you have any issues with the phone's speakers?\"},{\"answers\":[\"No, there are no issues\"],\"_id\":\"61432bd6f493256f045d46d6\",\"question\":\"Do you have any issues with your cellular network (4G), wifi or bluetooth?\"}]}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":3,\"question_en\":\"Functional problems with the mobile (wifi, speaker, touch, etc.)\",\"question_ar\":\"مشاكل في مزايا الجوال (وايفاي، اللمس، البطارية..)\",\"type\":\"yes-no-with-options\"},{\"_id\":\"61432d0af493256f045d46e2\",\"answers\":[{\"_id\":\"61432d0bf493256f045d46e3\",\"sub_choices\":[{\"_id\":\"61432d0bf493256f045d46e4\",\"yes_answers\":[\"Original Charger\"],\"option_en\":\"Original Charger\",\"option_ar\":\"شاحن أصلي \",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charger.png\",\"yes_question\":\"Do you have the following?\",\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e5\",\"yes_answers\":null,\"option_en\":\"Original Headphones\",\"option_ar\":\"سماعة أصلية \",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/earphones.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e6\",\"yes_answers\":null,\"option_en\":\"Screen Protector\",\"option_ar\":\"شاشة حماية\",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/screenprotector.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e7\",\"yes_answers\":null,\"option_en\":\"Original Box\",\"option_ar\":\"كرتون اصلي\",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/phone-box.png\",\"yes_question\":null,\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"614aa29e93787a68907fc86c\",\"sub_choices\":[],\"yes_answers\":[],\"no_questions\":[{\"answers\":[\"No charger \",\"Not Original Charger\"],\"_id\":\"617fbab4cacc358646f54d8c\",\"question\":\"Do you have the following?\"}],\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":4,\"question_en\":\"Do you have any of the follwing (Strap, Box or charger)?\",\"question_ar\":\"هل لديك أي مما يلي (حزام أو صندوق أو شاحن)؟\",\"type\":\"yes-no-with-options\"}]"</span>,
+        <span class="hljs-attr">"unmatchedquestions"</span>: <span class="hljs-string">"[{\"question\":\"Are there any display defects in your screen?\",\"answer\":\"Yes, colored lines and/or circles across the screen \"}]"</span>,
+        <span class="hljs-attr">"grade"</span>: <span class="hljs-string">"Extensive Use"</span>,
+        <span class="hljs-attr">"grade_ar"</span>: <span class="hljs-string">"مستخدم بشدة"</span>,
+        <span class="hljs-attr">"score"</span>: <span class="hljs-number">65.4</span>,
+        <span class="hljs-attr">"previous_grade"</span>: <span class="hljs-string">"Extensive Use"</span>,
+        <span class="hljs-attr">"previous_score"</span>: <span class="hljs-number">65.4</span>,
+        <span class="hljs-attr">"bidding"</span>: [],
+        <span class="hljs-attr">"save_as_draft_step"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"current_bid_price"</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">"favourited_by"</span>: [],
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Delete"</span>,
+        <span class="hljs-attr">"sell_status"</span>: <span class="hljs-string">"Available"</span>,
+        <span class="hljs-attr">"questionnaire_migration_status"</span>: <span class="hljs-string">"COMPLETED"</span>,
+        <span class="hljs-attr">"isApproved"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"isExpired"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"isFraudDetected"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"verified_date"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"isListedBefore"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"highlights"</span>: [],
+        <span class="hljs-attr">"attributes"</span>: [],
+        <span class="hljs-attr">"highlightsAdded"</span>: <span class="hljs-string">"isHighlighted"</span>,
+        <span class="hljs-attr">"isReported"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"reportedBy"</span>: [],
+        <span class="hljs-attr">"isVerifiedByAdmin"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"isPriceUpdating"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"variant_attributes_selections"</span>: [],
+        <span class="hljs-attr">"isBiddingProduct"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"trade_in"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"trade_in_status"</span>: <span class="hljs-string">"InProgress"</span>,
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6073fa2d5ad11470c33cc74e"</span>,
+        <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"6057280c7b6600be053415d6"</span>,
+        <span class="hljs-attr">"category_id"</span>: <span class="hljs-string">"60661c60fdc090d1ce2d4914"</span>,
+        <span class="hljs-attr">"brand_id"</span>: <span class="hljs-string">"6069faf484541d77f553167a"</span>,
+        <span class="hljs-attr">"model_id"</span>: <span class="hljs-string">"6069fb8084541d07be53167b"</span>,
+        <span class="hljs-attr">"varient"</span>: <span class="hljs-string">"256 GB"</span>,
+        <span class="hljs-attr">"varient_ar"</span>: <span class="hljs-string">"٢٥٦ غيغابايت"</span>,
+        <span class="hljs-attr">"body_cracks"</span>: <span class="hljs-string">"no"</span>,
+        <span class="hljs-attr">"sell_price"</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">"bid_price"</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-attr">"pick_up_address"</span>: {
+          <span class="hljs-attr">"address_id"</span>: <span class="hljs-string">"606c762d713153e90bab76d8"</span>,
+          <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Shsjsj"</span>,
+          <span class="hljs-attr">"city"</span>: <span class="hljs-string">"'abal 'abla"</span>,
+          <span class="hljs-attr">"postal_code"</span>: <span class="hljs-string">"12222"</span>,
+          <span class="hljs-attr">"address_type"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">""</span>
+        },
+        <span class="hljs-attr">"createdDate"</span>: <span class="hljs-string">"2021-04-12T07:43:41.011Z"</span>,
+        <span class="hljs-attr">"updatedDate"</span>: <span class="hljs-string">"2021-11-15T13:33:09.927Z"</span>,
+        <span class="hljs-attr">"__v"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"expiryDate"</span>: <span class="hljs-string">"2021-05-12T07:43:41.011Z"</span>,
+        <span class="hljs-attr">"code"</span>: <span class="hljs-string">"riHBegH"</span>,
+        <span class="hljs-attr">"varient_id"</span>: <span class="hljs-string">"632b3790f49ff67c8b401fab"</span>,
+        <span class="hljs-attr">"response"</span>: <span class="hljs-string">"6192619564f8e10029a9965c"</span>,
+        <span class="hljs-attr">"model_migration_source"</span>: <span class="hljs-string">"Updated old model_id = 6069fb8084541d07be53167b with 6069fb8084541d07be53167b"</span>,
+        <span class="hljs-attr">"model_variant_map_id"</span>: <span class="hljs-string">"636085f33b98a88c5b951241"</span>,
+        <span class="hljs-attr">"variant_migration_source"</span>: <span class="hljs-string">"Updated old variant_id with from 6069fbd484541db57053167c to 632b3790f49ff67c8b401fab"</span>,
+        <span class="hljs-attr">"rejected_reasons"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"rejected_timestamp"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"image_updated"</span>: <span class="hljs-string">"2023-09-12T14:03:04.450Z"</span>,
+        <span class="hljs-attr">"verifiedByAdminDate"</span>: <span class="hljs-string">"2024-01-18T19:16:41.584Z"</span>,
+        <span class="hljs-attr">"category"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"60661c60fdc090d1ce2d4914"</span>,
+          <span class="hljs-attr">"category_name_ar"</span>: <span class="hljs-string">"جوالات"</span>,
+          <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>
+        },
+        <span class="hljs-attr">"brand"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6069faf484541d77f553167a"</span>,
+          <span class="hljs-attr">"brand_name_ar"</span>: <span class="hljs-string">"أبل"</span>
+        },
+        <span class="hljs-attr">"model"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6069fb8084541d07be53167b"</span>,
+          <span class="hljs-attr">"model_name_ar"</span>: <span class="hljs-string">"آيفون ١٢"</span>
+        },
+        <span class="hljs-attr">"variant"</span>: [
+          {
+            <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"632b3790f49ff67c8b401fab"</span>
+          }
+        ],
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"6073fa2d5ad11470c33cc74e"</span>
+      },
+      {
+        <span class="hljs-attr">"product_images"</span>: [
+          <span class="hljs-string">"https://cdn.soum.sa/soum-prod/products/image-1617650090932.jpg"</span>
+        ],
+        <span class="hljs-attr">"defected_images"</span>: [],
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"F"</span>,
+        <span class="hljs-attr">"answer_to_questions"</span>: <span class="hljs-string">"[{\"question\":\"Is your screen broken/cracked or bent?\",\"answer\":\"Never\"},{\"question\":\"Have you ever replaced your screen or conducted a repair that require opening the phone?\",\"answer\":\"Never\"},{\"question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"answer\":\"No, there are no issues\"},{\"question\":\"Do you have any issues with your battery's health/or battery charing?\",\"answer\":\"Yes, battery decline very rapidly after unplugging\"},{\"question\":\"Are there any display defects in your screen?\",\"answer\":\"Yes, some areas of the screen doesn’t respond to touch\"},{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"No, all works fine\"},{\"question\":\"Do you have  any issues with your phone's cameras?\",\"answer\":\"Can't fully zoom-in/zoom-out in the front or back camera\"},{\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader? \",\"answer\":\"No, just like a new phone\"},{\"question\":\"Do you have any issues with the phone's speakers?\",\"answer\":\"Yes, it is not loud enough\"},{\"question\":\"Are there scratches on your screen?\",\"answer\":\"No, not a single scratch\"},{\"question\":\"Whats is your device's age?\",\"answer\":\"3 years or more\"},{\"question\":\"Whats is your battery maximum charging level? (you can find it in Settings &gt; Battery &gt; Battery Health)\",\"answer\":\"90%+\"}]"</span>,
+        <span class="hljs-attr">"answer_to_questions_ar"</span>: <span class="hljs-string">"[{\"question\":\"هل يوجد كسر أو  انحناء في شاشتك؟\",\"answer\":\"لا\"},{\"question\":\"هل قمت باستبدال شاشتك سابقا أو فتحت الجوال لأي سباب؟\",\"answer\":\"لا \"},{\"question\":\"هل يوجد أي مشكلة في الواي فاي، البلوتوث، او الوصول للشبكة (4G)؟\",\"answer\":\"لا توجد مشكلة إطلاقًا\"},{\"question\":\"هل يوجد أي مشكلة في بطارية الجهاز وعمرها أو شحنها؟\",\"answer\":\"نعم، البطارية تنفذ بشكل سريع بعد الشحن\"},{\"question\":\"هل يوجد أي خلل في شاشتك؟\",\"answer\":\"نعم، بعض مناطق الشاشة لا تستجيب للمس \"},{\"question\":\"هل يوجد أي مشكلة في أماكن الادخال أو الأزرار أو مفاتيح الجهاز؟\",\"answer\":\"لا، لا يوجد مشكلة اطلاقا\"},{\"question\":\"هل يوجد أي مشكلة في كاميرا الجهاز؟\",\"answer\":\"نعم، لا يمكن تكبير/تصغير الصورة في الكاميرا الأمامية أو الخلفية\"},{\"question\":\"هل يوجد أي مشكلة في نظام التعرف على الوجه (FaceID) أو البصمة؟\",\"answer\":\"لا، يعمل مثل الجهاز الجديد\"},{\"question\":\"هل يوجد أي مشكلة في سماعات الجهاز؟\",\"answer\":\"نعم، الصوت ليس عالي كما يجب\"},{\"question\":\"هل يوجد خدوش في شاشتك؟\",\"answer\":\"لا، لا يوجد أي خدش\"},{\"question\":\"ماهو عمر جهازك؟\",\"answer\":\"أكثر من ثلاث سنوات\"},{\"question\":\"ماهو عمر البطارية الحالي؟ ـ(يمكنك إيجاده من الإعدادات &gt; البطارية &gt; عمر البطارية)\",\"answer\":\"90%+\"}]"</span>,
+        <span class="hljs-attr">"answer_to_questions_migration"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"answer_to_questions_ar_migration"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"unansweredquestions"</span>: <span class="hljs-string">"[{\"_id\":\"61432d0af493256f045d46e2\",\"answers\":[{\"_id\":\"61432d0bf493256f045d46e3\",\"sub_choices\":[{\"_id\":\"61432d0bf493256f045d46e4\",\"yes_answers\":[\"Original Charger\"],\"option_en\":\"Original Charger\",\"option_ar\":\"شاحن أصلي \",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/charger.png\",\"yes_question\":\"Do you have the following?\",\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e5\",\"yes_answers\":null,\"option_en\":\"Original Headphones\",\"option_ar\":\"سماعة أصلية \",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/earphones.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e6\",\"yes_answers\":null,\"option_en\":\"Screen Protector\",\"option_ar\":\"شاشة حماية\",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/screenprotector.png\",\"yes_question\":null,\"no_questions\":null},{\"_id\":\"61432d0bf493256f045d46e7\",\"yes_answers\":null,\"option_en\":\"Original Box\",\"option_ar\":\"كرتون اصلي\",\"score\":0,\"icon\":\"https://soum01.fra1.digitaloceanspaces.com/soum-prod/questions/mobile/phone-box.png\",\"yes_question\":null,\"no_questions\":null}],\"yes_answers\":null,\"answer_en\":\"Yes\",\"answer_ar\":\"نعم\",\"score\":0,\"yes_question\":null,\"no_questions\":null},{\"_id\":\"614aa29e93787a68907fc86c\",\"sub_choices\":[],\"yes_answers\":[],\"no_questions\":[{\"answers\":[\"No charger \",\"Not Original Charger\"],\"_id\":\"617fbab4cacc358646f54d8c\",\"question\":\"Do you have the following?\"}],\"answer_en\":\"No\",\"answer_ar\":\"لا\",\"score\":0}],\"choices\":[],\"questionnaire_id\":\"614316ca8e7e7d82c4cf6221\",\"order\":4,\"question_en\":\"Do you have any of the follwing (Strap, Box or charger)?\",\"question_ar\":\"هل لديك أي مما يلي (حزام أو صندوق أو شاحن)؟\",\"type\":\"yes-no-with-options\"}]"</span>,
+        <span class="hljs-attr">"unmatchedquestions"</span>: <span class="hljs-string">"[{\"question\":\"Have you ever replaced your screen or conducted a repair that require opening the phone?\",\"answer\":\"Never\"},{\"question\":\"Are there any display defects in your screen?\",\"answer\":\"Yes, some areas of the screen doesn’t respond to touch\"},{\"question\":\"Is your screen broken/cracked or bent?\",\"answer\":\"Never\"},{\"question\":\"Is your screen broken/cracked or bent?\",\"answer\":\"Never\"},{\"question\":\"Are there scratches on your screen?\",\"answer\":\"No, not a single scratch\"},{\"question\":\"Are there scratches on your screen?\",\"answer\":\"No, not a single scratch\"},{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"No, all works fine\"},{\"question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"answer\":\"No, there are no issues\"},{\"question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"answer\":\"No, there are no issues\"},{\"question\":\"Do you have any issues with your cellular network (4G), Wifi or bluetooth?\",\"answer\":\"No, there are no issues\"},{\"question\":\"Is there any issues with FaceID/TouchID/Fingerprint reader? \",\"answer\":\"No, just like a new phone\"},{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"No, all works fine\"},{\"question\":\"Are there any issues with the buttons, plugs or switches in your phone?\",\"answer\":\"No, all works fine\"}]"</span>,
+        <span class="hljs-attr">"grade"</span>: <span class="hljs-string">"Noticeably used"</span>,
+        <span class="hljs-attr">"grade_ar"</span>: <span class="hljs-string">"إستخدام ملحوظ"</span>,
+        <span class="hljs-attr">"score"</span>: <span class="hljs-number">86.9</span>,
+        <span class="hljs-attr">"previous_grade"</span>: <span class="hljs-string">"Fair"</span>,
+        <span class="hljs-attr">"previous_score"</span>: <span class="hljs-number">86.9</span>,
+        <span class="hljs-attr">"bidding"</span>: [],
+        <span class="hljs-attr">"save_as_draft_step"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"current_bid_price"</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-attr">"favourited_by"</span>: [],
+        <span class="hljs-attr">"status"</span>: <span class="hljs-string">"Delete"</span>,
+        <span class="hljs-attr">"sell_status"</span>: <span class="hljs-string">"Sold"</span>,
+        <span class="hljs-attr">"questionnaire_migration_status"</span>: <span class="hljs-string">"COMPLETED"</span>,
+        <span class="hljs-attr">"isApproved"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"isExpired"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"isFraudDetected"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"verified_date"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"isListedBefore"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"highlights"</span>: [],
+        <span class="hljs-attr">"attributes"</span>: [],
+        <span class="hljs-attr">"highlightsAdded"</span>: <span class="hljs-string">"notRan"</span>,
+        <span class="hljs-attr">"isReported"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"reportedBy"</span>: [],
+        <span class="hljs-attr">"isVerifiedByAdmin"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"isPriceUpdating"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"variant_attributes_selections"</span>: [],
+        <span class="hljs-attr">"isBiddingProduct"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"trade_in"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"trade_in_status"</span>: <span class="hljs-string">"InProgress"</span>,
+        <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"606b61aba5642ebb0fb9c2ad"</span>,
+        <span class="hljs-attr">"user_id"</span>: <span class="hljs-string">"605742f7323860a2226cda81"</span>,
+        <span class="hljs-attr">"category_id"</span>: <span class="hljs-string">"60661c60fdc090d1ce2d4914"</span>,
+        <span class="hljs-attr">"brand_id"</span>: <span class="hljs-string">"6069faf484541d77f553167a"</span>,
+        <span class="hljs-attr">"model_id"</span>: <span class="hljs-string">"606b60839537c08911d3bab1"</span>,
+        <span class="hljs-attr">"varient"</span>: <span class="hljs-string">"256 GB"</span>,
+        <span class="hljs-attr">"varient_ar"</span>: <span class="hljs-string">"٢٥٦ غيغابايت"</span>,
+        <span class="hljs-attr">"body_cracks"</span>: <span class="hljs-string">"no"</span>,
+        <span class="hljs-attr">"sell_price"</span>: <span class="hljs-number">25</span>,
+        <span class="hljs-attr">"bid_price"</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-attr">"pick_up_address"</span>: {
+          <span class="hljs-attr">"address_id"</span>: <span class="hljs-string">"606a075252d14b724bb7f0b0"</span>,
+          <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Aa"</span>,
+          <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Riyadh"</span>,
+          <span class="hljs-attr">"postal_code"</span>: <span class="hljs-string">"00000"</span>,
+          <span class="hljs-attr">"address_type"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"latitude"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"longitude"</span>: <span class="hljs-string">""</span>
+        },
+        <span class="hljs-attr">"createdDate"</span>: <span class="hljs-string">"2021-04-05T19:14:51.103Z"</span>,
+        <span class="hljs-attr">"updatedDate"</span>: <span class="hljs-string">"2021-11-15T13:01:46.762Z"</span>,
+        <span class="hljs-attr">"__v"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"expiryDate"</span>: <span class="hljs-string">"2021-05-05T19:14:51.103Z"</span>,
+        <span class="hljs-attr">"code"</span>: <span class="hljs-string">"n165Je3"</span>,
+        <span class="hljs-attr">"varient_id"</span>: <span class="hljs-string">"632b378ff49ff67c8b4006d0"</span>,
+        <span class="hljs-attr">"response"</span>: <span class="hljs-string">"61925a3ac1774e002ae093f0"</span>,
+        <span class="hljs-attr">"model_migration_source"</span>: <span class="hljs-string">"Updated old model_id = 606b60839537c08911d3bab1 with 606b60839537c08911d3bab1"</span>,
+        <span class="hljs-attr">"model_variant_map_id"</span>: <span class="hljs-string">"636085f33b98a88c5b951250"</span>,
+        <span class="hljs-attr">"variant_migration_source"</span>: <span class="hljs-string">"Updated old variant_id with from 606b6154a5642e6ddfb9c2aa to 632b3790f49ff67c8b4026e8"</span>,
+        <span class="hljs-attr">"mismatch_model_migration"</span>: <span class="hljs-string">"Update variant from 632b3790f49ff67c8b4026e8 to 632b378ff49ff67c8b4006d0"</span>,
+        <span class="hljs-attr">"rejected_reasons"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"rejected_timestamp"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"image_updated"</span>: <span class="hljs-string">"2023-09-12T14:03:04.451Z"</span>,
+        <span class="hljs-attr">"deletedDate"</span>: <span class="hljs-string">"2024-01-17T07:49:45.293Z"</span>,
+        <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"Deleted by blocking users"</span>,
+        <span class="hljs-attr">"verifiedByAdminDate"</span>: <span class="hljs-string">"2024-01-18T19:16:41.585Z"</span>,
+        <span class="hljs-attr">"category"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"60661c60fdc090d1ce2d4914"</span>,
+          <span class="hljs-attr">"category_name_ar"</span>: <span class="hljs-string">"جوالات"</span>,
+          <span class="hljs-attr">"active"</span>: <span class="hljs-literal">true</span>
+        },
+        <span class="hljs-attr">"brand"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"6069faf484541d77f553167a"</span>,
+          <span class="hljs-attr">"brand_name_ar"</span>: <span class="hljs-string">"أبل"</span>
+        },
+        <span class="hljs-attr">"model"</span>: {
+          <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"606b60839537c08911d3bab1"</span>,
+          <span class="hljs-attr">"model_name_ar"</span>: <span class="hljs-string">"آيفون ٧"</span>
+        },
+        <span class="hljs-attr">"variant"</span>: [
+          {
+            <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"632b378ff49ff67c8b4006d0"</span>
+          }
+        ],
+        <span class="hljs-attr">"id"</span>: <span class="hljs-string">"606b61aba5642ebb0fb9c2ad"</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+  <span class="hljs-attr">"timeStamp"</span>: <span class="hljs-string">"2024-01-18 19:16:41"</span>,
+  <span class="hljs-attr">"violations"</span>: <span class="hljs-literal">null</span>
+}</code></pre>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="btn btn-outline-secondary btn-sm copyButton" type="button" data-clipboard-action="copy" data-clipboard-target="#copyText-56724e6e-e2d8-4619-aac6-dc470ef8124e">Copy to Clipboard</button>
+                                        </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card border-info">
+                                <div class="card-body">
+                                <h5 class="card-title text-uppercase text-white text-center bg-info">Test Information</h5>
+                                    <div class="table-responsive text-nowrap">
+                                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="datatable table table-hover dataTable" id="DataTables_Table_0" role="grid">
+                                        <thead><tr class="text-center" role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 0px;">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Passed: activate to sort column ascending" style="width: 0px;">Passed</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Failed: activate to sort column ascending" style="width: 0px;">Failed</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Skipped: activate to sort column ascending" style="width: 0px;">Skipped</th></tr></thead>
+                                            <tbody>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            <tr role="row" class="odd">
+                                                    <td class="sorting_1">API Response Format</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">Check data type of the response</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">Check response message</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">Check results array inside the response data properties</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">Check the information for response data</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">Number of Products per Page</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">Response time is less than 5000ms</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="even">
+                                                    <td class="sorting_1">Schema is valid</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr><tr role="row" class="odd">
+                                                    <td class="sorting_1">Status code is 200</td>
+                                                    <td class="text-center bg-success">1</td>
+                                                    <td class="text-center ">0</td>
+                                                    <td class="text-center ">0</td>
+                                                </tr></tbody>
+                                            <tfoot>
+                                                <tr class="bg-light"><td rowspan="1" colspan="1"><strong>Total</strong></td><td class="text-center" rowspan="1" colspan="1">9</td><td class="text-center" rowspan="1" colspan="1">0</td><td class="text-center" rowspan="1" colspan="1">0</td></tr>
+                                            </tfoot>
+                                        </table></div></div><div class="row"><div class="col-sm-12 col-md-5"></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                    </div>
+                                    <div class="row d-none">
+                                    <div class="col-sm-12 mb-3">
+                                        <div class="card-deck">
+                                        <div class="card border-danger" style="width: 50rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-uppercase text-white text-center bg-danger">Test Failure</h5>
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover">
+                                                    <thead><tr class="text-nowrap"><th>Test Name</th><th>Assertion Error</th></tr></thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+<script src="./Newman Summary Report_files/jquery.min.js"></script>
+<script src="./Newman Summary Report_files/bootstrap.bundle.min.js"></script>
+<script src="./Newman Summary Report_files/datatables.min.js"></script>
+<script src="./Newman Summary Report_files/clipboard.min.js"></script>
+<script src="./Newman Summary Report_files/remarkable.min.js"></script>
+<script src="./Newman Summary Report_files/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Set slider initial position depending on the localstorage state -->
+
+<script>
+(function () {
+  var sliderChecked = true;
+  if (localStorage.getItem('theme') === 'theme-light') {
+    setTheme('theme-light');
+    sliderChecked = false;
+  } else {
+    setTheme('theme-dark');
+    sliderChecked = true;
+  }
+  $(document).ready( function () {
+    document.getElementById('slider').checked = sliderChecked;
+  });
+})();
+</script>
+
+<!-- Data Table Configuration -->
+
+<script>
+$(document).ready( function () {
+    $('.datatable').DataTable({
+        "retrieve": true,
+        "paging": false,
+        "info": false,
+        "fixedColumns":   {
+            "heightMatch": 'none'
+        }
+    });
+});
+</script>
+
+<!-- Tooltip Configuration -->
+
+<script>
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger : 'hover'
+    })
+})
+</script>
+
+<!-- Show/Hide The Folders -->
+
+<script>
+$('#openAll').on('click', function(e) {
+let clickCount = $(this).data("clickCount") || 1
+switch (clickCount){
+    case 1:
+            $('#folder-2b8cf587-4191-44c1-b324-aaf04e9b4254-iteration-0').removeClass('collapsed')
+            $('#folder-collapse-2b8cf587-4191-44c1-b324-aaf04e9b4254-iteration-0').addClass('show')
+        $('#openAll').html("Collapse Folders");
+        break;
+    case 2:
+            $('#folder-2b8cf587-4191-44c1-b324-aaf04e9b4254-iteration-0').addClass('collapsed')
+            $('#folder-collapse-2b8cf587-4191-44c1-b324-aaf04e9b4254-iteration-0').removeClass('show')
+        $('#openAll').html("Expand Folders");
+        break;
+}
+clickCount = clickCount > 1 ? 1 : ++clickCount;
+$(this).data("clickCount", clickCount)
+})
+</script>
+
+<!-- Show/Hide The Requests -->
+
+<script>
+$('#openAllRequests').on('click', function(e) {
+let clickCount = $(this).data("clickCount") || 1
+switch (clickCount){
+    case 1:
+            $('#requests-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('collapsed')
+            $('#collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('collapsed')
+            $('#requests-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('show')
+            $('#collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('show')
+        $('#openAllRequests').html("Collapse Requests");
+        break;
+    case 2:
+            $('#requests-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('collapsed')
+            $('#collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('collapsed')
+            $('#requests-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('show')
+            $('#collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('show')
+        $('#openAllRequests').html("Expand Requests");
+        break;
+}
+clickCount = clickCount > 1 ? 1 : ++clickCount;
+$(this).data("clickCount", clickCount)
+})
+</script>
+
+<!-- Show/Hide The Skipped Tests -->
+
+<script>
+$('#openAllSkipped').on('click', function(e) {
+let clickCount = $(this).data("clickCount") || 1
+switch (clickCount){
+    case 1:
+            $('#skipped-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('collapsed')
+            $('#skipped-collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('collapsed')
+            $('#skipped-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('show')
+            $('#skipped-collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('show')
+        $('#openAllSkipped').html("Collapse All Skipped Tests");
+        break;
+    case 2:
+            $('#skipped-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('collapsed')
+            $('#skipped-collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').addClass('collapsed')
+            $('#skipped-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('show')
+            $('#skipped-collapse-8902b688-cb4f-45bb-be0d-84337cbd7f43').removeClass('show')
+        $('#openAllSkipped').html("Expand All Skipped Tests");
+        break;
+}
+clickCount = clickCount > 1 ? 1 : ++clickCount;
+$(this).data("clickCount", clickCount)
+})
+</script>
+
+<!-- Show/Hide The Failures -->
+
+<script>
+$('#openAllFailed').on('click', function(e) {
+let clickCount = $(this).data("clickCount") || 1
+let failedItemContent
+let failedItemHeading
+switch (clickCount){
+    case 1:
+        $('#openAllFailed').html("Collapse All Failed Tests");
+        break;
+    case 2:
+        $('#openAllFailed').html("Expand All Failed Tests");
+        break;
+}
+clickCount = clickCount > 1 ? 1 : ++clickCount;
+$(this).data("clickCount", clickCount)
+})
+</script>
+
+<!-- Pretty Print the Response Body-->
+
+<script>
+function isJSON(data)
+{
+    var ret = true;
+    try {
+            JSON.parse(data);
+    }catch(e) {
+            ret = false;
+    }
+    return ret;
+}
+
+function isXML(data)
+{
+    return (data.length > 0 && data[0] === '<');
+}
+
+// see https://gist.github.com/sente/1083506/d2834134cd070dbcc08bf42ee27dabb746a1c54d#gistcomment-2254622
+function formatXML(data) {
+    const PADDING = ' '.repeat(2); // set desired indent size here
+    const reg = /(>)(<)(\/*)/g;
+    let pad = 0;
+    xml = data.replace(reg, '$1\r\n$2$3');
+
+    return xml.split('\r\n').map((node, index) => {
+        let indent = 0;
+        if (node.match(/.+<\/\w[^>]*>$/)) {
+            indent = 0;
+        } else if (node.match(/^<\/\w/) && pad > 0) {
+            pad -= 1;
+        } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
+            indent = 1;
+        } else {
+            indent = 0;
+        }
+
+        pad += indent;
+        return PADDING.repeat(pad - indent) + node;
+    }).join('\r\n');
+}
+
+$(".prettyPrint").each(function () {
+        var data = $(this).text();
+        // Verify whether data is JSON
+        if(isJSON(data))
+        {
+                obj = JSON.parse(data);
+                data = JSON.stringify(obj, null, 2);
+        }
+        else if(isXML(data)) {
+            data = formatXML(data);
+        }
+        $(this).text(data);
+});
+</script>
+
+
+<!-- Copy Response Body To Clipboard -->
+
+<script>
+    var clipboard = new ClipboardJS('.copyButton');
+
+    clipboard.on('success', function(e) {
+        e.clearSelection();
+        $(".copyButton").addClass("bg-success text-white")
+        e.trigger.textContent = '✔ Copied!';
+        window.setTimeout(function() {
+            $(".copyButton").removeClass("bg-success text-white")
+            e.trigger.textContent = 'Copy to Clipboard';
+        }, 2000);
+    });
+    clipboard.on('error', function(e) {
+        e.clearSelection();
+        $(".copyButton").addClass("bg-danger text-white")
+        e.trigger.textContent = '✗ Not Copied';
+        window.setTimeout(function() {
+            $(".copyButton").removeClass("bg-danger text-white")
+            e.trigger.textContent = 'Copy to Clipboard';
+        }, 2000);
+    });
+
+</script>
+
+<!-- Render the Description Markdown and link in the test failures -->
+
+<script>
+    const remarkable = new Remarkable();
+
+    const descriptions = document.querySelectorAll(".renderMarkdown");
+    descriptions.forEach(description => {
+        description.innerHTML = renderHtmlFromMarkdown(description.textContent);
+    });
+    function renderHtmlFromMarkdown(markdown) {
+        return remarkable.render(trim(markdown));
+    }
+    function trim(string) {
+        return string ? string.replace(/^ +| +$/gm, "") : string;
+    }
+</script>
+
+<!-- Show/Hide The Toggles When Scrolling The Page -->
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("topOfRequestsScreen").style.display = "block";
+    document.getElementById("topOfFailuresScreen").style.display = "block";
+    document.getElementById("topOfSkippedScreen").style.display = "block";
+    document.getElementById("openAll").style.display = "none";
+    document.getElementById("openAllRequests").style.display = "none";
+
+
+  } else {
+    document.getElementById("topOfRequestsScreen").style.display = "none";
+    document.getElementById("topOfFailuresScreen").style.display = "none";
+    document.getElementById("topOfSkippedScreen").style.display = "none";
+    document.getElementById("openAll").style.display = "block";
+    document.getElementById("openAllRequests").style.display = "block";
+
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<!-- Creates The Iteration Tabs -->
+
+<script type="text/javascript">
+    "use strict";
+
+window.onload = function () {
+
+  // set display for all blocks of response
+  var allItems = document.querySelectorAll('[class*=iteration-]');
+  allItems.forEach(function(elem){
+    elem.style.display = 'block';
+  });
+
+   
+  let totalIterations = 1;
+   
+
+  let menu = document.querySelector('#execution-menu .nav');
+
+  for(var i = 0; i < totalIterations; i++)
+  {
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode((i + 1)));
+    li.setAttribute('id', 'iteration-' + i);
+    li.classList.add("custom-tab");
+    li.classList.add("itPassed");
+
+    li.addEventListener('click', function() {
+      //set display to none for all except row
+      let allItems = document.querySelectorAll('[class*=iteration-]:not(.row)');
+      allItems.forEach(function(elem) {
+        elem.style.display = 'none';
+      })
+
+      let allMenus = document.querySelectorAll('[id*=iteration-]');
+      allMenus.forEach(function(elem){
+        elem.style.borderBottom = 'none';
+      })
+
+      this.style.borderBottom = 'solid 3px #032a33';
+
+      let items = document.querySelectorAll("." + this.id + ':not(.row)');
+      items.forEach(function(elem) {
+        elem.style.display = elem.style.display == 'block' ? 'none' : 'block';
+      })
+    });
+    menu.appendChild(li);
+  }
+
+  //shows first tab data
+  document.getElementById('iteration-0').click();
+  document.getElementById('iterationSelected').innerHTML = `Iteration ${document.getElementById('iteration-0').innerHTML} selected`
+
+}
+</script>
+
+<!-- Create the Selected Iteration Label -->
+
+<script>
+$(document).ready(function(){
+    $(function() {
+        $("#iterationList li").click(function() {
+            document.getElementById('iterationSelected').innerHTML = "Iteration " + this.innerHTML + " selected"
+        });
+    });
+});
+</script>
+
+<!-- Filter Action for the Iterations -->
+
+<script>
+$("#filterInput").on("input paste", function() {
+    var value = $(this).val();
+    $("#iterationList li").filter(function() {
+	    $("#showOnlyFailures").data("clickCount") ? $("#showOnlyFailures").click():null;
+        $(this).toggle($(this).text().indexOf(value) > -1)
+    });
+});
+</script>
+
+<!-- Showing the Failed Interations -->
+
+<script>
+$('#showOnlyFailures').on('click', function(e) {
+    let clickCount = $(this).data("clickCount") || 1
+	$("#filterInput").val()!="" && clickCount==1 ? $("#filterInput").val('').trigger('input'): null;
+    let selectedIteration = $('#iterationList li').filter(function () {
+        return $(this).css('border-bottom').indexOf("solid") > -1 && $(this).hasClass('itFailed');
+    });
+    selectedIteration.length || clickCount > 1 ? null : $("#iterationList li.itFailed")[0].click()
+    $("#iterationList li.itPassed").toggle()
+    $("div.bg-success [id*=requests]").parents('[class^="row iteration-"]').toggle();
+    clickCount = clickCount > 1 ? 1 : ++clickCount;
+    clickCount > 1 ? $("#showOnlyFailures").html("Show All Iterations") : $("#showOnlyFailures").html("Show Failed Iterations");
+    $(this).data("clickCount", clickCount)
+})
+</script>
+
+
+</body></html>
